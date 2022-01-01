@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- font awesome link cdn  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <title>Card-Design</title>
+</head>
+
+<body>
+
+    <div class="box-container">
+        <div class="box">
+            <div class="image-container">
+                <div class="big-image">
+                    <img src="/450.jaeger-lecoultrepolaris.webp" alt="">
+                </div>
+
+                <div class="small-image">
+                    <img class="active" src="https://cdn2.jomashop.com/media/catalog/product/cache/fde19e4197824625333be074956e7640/l/o/longines-spirit-chronograph-automatic-mens-watch-l38204930-l38204930.jpg?width=546&height=546" alt="">
+                    <img src="https://www.thbaker.co.uk/pub/media/catalog/product/2/4/24-75-181-longines-master-automatic-chronograph-blue-dial-leather-strap-watch-l26734920_1.jpg" alt="">
+                    <img src="https://www.jaeger-lecoultre.com/content/dam/rcq/jlc/16/40/77/7/1640777.png.crop.750.high.png"
+                        alt="">
+                    <img src="https://en-hk.firstclasswatches.com/thumbnails/images/products/product59634-6162_cropped.jpg.thumb_FFFCFA_593x1000.jpg"
+                        alt="">
+                </div>
+            </div>
+
+            <div class="content">
+                <h3 class="title">watch for man</h3>
+                <div class="price">$1000</div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, sed?</p>
+
+                <form action="">
+                    <div class="dropDown">
+                        <span> size :</span>
+                        <select name="" id="">
+                            <option value="small">small</option>
+                            <option value="medium">medium</option>
+                            <option value="large">large</option>
+                            <option value="extra-large">extra-large</option>
+                        </select>
+                        <span> color :</span>
+                        <select name="" id="">
+                            <option value="black">black</option>
+                            <option value="blue">blue</option>
+                            <option value="white">white</option>
+                        
+                        </select>
+                    </div>
+                    <div class="quantity">
+                        <span> quantity: </span>
+                        <input type="number" value="1">
+                    </div>
+                </form>
+
+                <a href=""><button class="btn"><i class="fas fa-shopping-cart"></i>add to cart</button></a>
+
+                <span class="stock"><i class="fas fa-check"></i>in stock</span>
+
+                <div class="share">
+                    <a href="#">facebook</a>
+                    <a href="#">twitter</a>
+                    <a href="#">instragram</a>
+                    <a href="#">pinterest</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+   <!-- jquary cdn link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            $('.small-image img').click(function(){
+                $(this).addClass('active').siblings().removeClass('active')
+
+                let image = $(this).attr('src');
+                $('.big-image img').attr('src',image)
+            })
+        })
+    </script>
+</body>
+
+</html>
